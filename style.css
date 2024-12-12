@@ -1,0 +1,133 @@
+/* General styles */
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+/* Theme toggle styles */
+
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.theme-toggle input {
+  display: none;
+}
+
+.theme-toggle label {
+  width: 50px;
+  height: 25px;
+  border-radius: 25px;
+  background: #ccc;
+  position: relative;
+  transition: background .2s;
+}
+
+.theme-toggle label::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #fff;
+  transition: all .2s;
+}
+
+.theme-toggle input:checked + label {
+  background: #333;
+}
+
+.theme-toggle input:checked + label::after {
+  left: 27px;
+}
+
+/* Dark theme styles */
+
+body.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark * {
+  color: #fff;
+}
+
+body.dark form {
+  background-color: #333;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background-color: #333;
+  border-color: #555;
+  color: #fff;
+}
+
+body.dark button {
+  background-color: #4CAF50; /* Adjust as needed */
+  border-color: #4CAF50;
+  color: #fff;
+}
+
+body.dark button:hover {
+  background-color: #3e8e41; /* Adjust as needed */
+  border-color: #3e8e41;
+}
+
+body.dark .theme-toggle label {
+  background-color: #333;
+}
+
+body.dark .theme-toggle label::after {
+  background-color: #fff;
+}
