@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  background-color: #f2f2f2;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; 
+  margin-bottom: 20px;
+}
+
+label {
+  text-align: center; 
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; 
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 16px;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+/* Theme toggle styles */
+
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.theme-toggle input {
+  display: none;
+}
+
+.theme-toggle label {
+  width: 50px;
+  height: 25px;
+  border-radius: 25px;
+  background: #ccc;
+  position: relative;
+  transition: background .2s;
+}
+
+.theme-toggle label::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #fff;
+  transition: all .2s;
+}
+
+.theme-toggle input:checked + label {
+  background: #333;
+}
+
+.theme-toggle input:checked + label::after {
+  left: 27px;
+}
+
+/* Dark theme styles */
+
+body.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark * {
+  color: #fff;
+}
+
+body.dark form {
+  background-color: #333;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background-color: #333;
+  border-color: #555;
+  color: #fff;
+}
+
+body.dark button {
+  background-color: #4CAF50; 
+  border-color: #4CAF50;
+  color: #fff;
+}
+
+body.dark button:hover {
+  background-color: #3e8e41; 
+  border-color: #3e8e41;
+}
+
+body.dark .theme-toggle label {
+  background-color: #333;
+}
+
+body.dark .theme-toggle label::after {
+  background-color: #fff;
+}
