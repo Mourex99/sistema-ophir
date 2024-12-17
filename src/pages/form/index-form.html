@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-form.css">
 </head>
 <body>
+
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+        <button id="menu-toggle" class="menu-btn">☰</button>
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="../clientes/index-cliente.html">Clientes Cadastrados</a></li>
+                <li><a href="../login/index-login.html" id="logout">Sair</a></li>
+                <footer>
+                    <p>© Todos os direitos reservados</p>
+                    <p>Desenvolvido por: <a href="https://github.com/Mourex99/sistema-ophir" target="_blank">Mateus Moura</a></p>
+                  </footer>
+            </ul>
+        </nav>
+    </div>
+
+
     <form id="form">
         <h2>Formulário de Cadastro</h2>
         <div class="form-group">
@@ -38,6 +55,6 @@
       <label for="theme-toggle"></label>
   </div>
   
-    <script src="script.js"></script>
+    <script src="script-form.js"></script>
 </body>
 </html>

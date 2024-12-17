@@ -48,7 +48,7 @@ button {
 }
 
 button:hover {
-  background-color: #3e8e41;
+  background-color: #e2be1c;
 }
 
 /* Theme toggle styles */
@@ -60,6 +60,7 @@ button:hover {
   display: flex;
   align-items: center;
   cursor: pointer;
+  z-index: 1001;
 }
 
 .theme-toggle input {
@@ -119,14 +120,14 @@ body.dark select {
 }
 
 body.dark button {
-  background-color: #4CAF50; 
-  border-color: #4CAF50;
+  background-color: #e2be1c; 
+  border-color: #e2be1c;
   color: #fff;
 }
 
 body.dark button:hover {
-  background-color: #3e8e41; 
-  border-color: #3e8e41;
+  background-color: #e2be1c; 
+  border-color: #ffffff;
 }
 
 body.dark .theme-toggle label {
@@ -135,4 +136,85 @@ body.dark .theme-toggle label {
 
 body.dark .theme-toggle label::after {
   background-color: #fff;
+}
+
+/* Menu Bar */
+.menu-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #e2be1c;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 200px;
+  padding: 0;
+}
+
+.menu.active {
+  display: flex;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #ddd;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.menu li a:hover {
+  background-color: #ddd;
+}
+
+/* Dark theme support for menu */
+body.dark .menu {
+  background-color: #333;
+}
+
+body.dark .menu li a {
+  color: #fff;
+}
+
+body.dark .menu li a:hover {
+  background-color: #555;
+}
+
+footer{
+  font-size: 10px;
+  text-align: center;
+  background-color: #e2be1c;
+  color: #000000;
+  padding: 10px;
 }

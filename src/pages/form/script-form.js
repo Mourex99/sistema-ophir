@@ -40,3 +40,32 @@ themeToggle.addEventListener('change', () => {
     }
   }
 });
+
+// Menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
+// Logout functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const logoutLink = document.getElementById('logout');
+  
+  if (logoutLink) {
+      logoutLink.addEventListener('click', function(e) {
+          e.preventDefault(); // Previne o comportamento padrão do link
+          
+          // Aqui você pode adicionar qualquer lógica de logout necessária
+          // Por exemplo, limpar dados do localStorage
+          localStorage.clear();
+          
+          // Se você estiver usando sessionStorage, você pode limpá-lo também
+          sessionStorage.clear();
+          
+          // Redireciona para a página de login
+          window.location.href = '../login/index-login.html';
+      });
+  }
+});

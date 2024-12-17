@@ -1,0 +1,112 @@
+/* style.css */
+
+:root {
+    --primary-color: #e2be1c;
+    --secondary-color: #f0f0f0;
+    --font-family: Arial, sans-serif;
+    --background-gradient: linear-gradient(to right, #e2be1c, #d4b35a);
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background: var(--secondary-color);
+    color: #333;
+}
+
+header {
+    background: var(--background-gradient);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#search {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#search:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+#search::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.lista-clientes {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.cliente {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+}
+
+.cliente:hover {
+    background-color: #f5f9ff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.detalhes {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.copiar {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 12px;
+}
+
+.copiar:hover {
+    background-color: hsl(210, 100%, 30%);
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--background-gradient);
+    color: #fff;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}

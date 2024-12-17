@@ -27,6 +27,6 @@ form.addEventListener('submit', (event) => {
     // Aqui você faria a requisição para o backend
     // Por enquanto, vamos simular um login bem-sucedido e redirecionar
     alert('Login bem-sucedido!');
-    window.location.href = 'https://cadastrodeclienteophir.netlify.app/'; // Substitua por sua página de destino
+    window.location.href = '/src/pages/form/index-form.html'; // Substitua por sua página de destino
   }
 });
