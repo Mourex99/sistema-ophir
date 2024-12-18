@@ -26,19 +26,34 @@ const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 const themeText = document.getElementById('theme-text'); // Adicione esta linha
 
-themeToggle.addEventListener('change', () => {
-  if (themeToggle.checked) {
+// Função para aplicar o tema e salvar no localStorage
+function applyTheme(isDark) {
+  if (isDark) {
     body.classList.add('dark');
-    // Check if themeText exists before modifying it
     if (themeText) {
       themeText.textContent = 'Tema Escuro';
     }
+    localStorage.setItem('theme', 'dark');
   } else {
     body.classList.remove('dark');
     if (themeText) {
       themeText.textContent = 'Tema Claro';
     }
+    localStorage.setItem('theme', 'light');
   }
+}
+
+// Lê o tema do localStorage ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  const isDark = savedTheme === 'dark';
+  applyTheme(isDark);
+  themeToggle.checked = isDark; // Sincroniza o estado do botão
+});
+
+// Alterna o tema ao clicar no botão
+themeToggle.addEventListener('change', () => {
+  applyTheme(themeToggle.checked);
 });
 
 // Menu toggle
