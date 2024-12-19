@@ -1,0 +1,18 @@
+[build]
+  publish = "src"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/cadastro"
+  to = "/pages/form/index-form.html"
+  status = 200
+
+[[redirects]]
+  from = "/login"
+  to = "/pages/login/index-login.html"
+  status = 200
+
+[[redirects]]
+  from = "/clientes"
+  to = "/pages/clientes/index-cliente.html"
+  status = 200
