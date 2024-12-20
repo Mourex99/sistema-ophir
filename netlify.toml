@@ -15,3 +15,8 @@
   from = "/clientes"
   to = "/pages/clientes/index-cliente.html"
   status = 200
+
+  [[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
