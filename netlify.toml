@@ -1,15 +1,14 @@
 [build]
-  publish = "src"
-  
+  publish = "src" 
 
 [[redirects]]
   from = "/cadastro"
-  to = "/pages/form/index-cliente.html"
+  to = "/pages/form/index-form.html"
   status = 200
 
 [[redirects]]
   from = "/login"
-  to = "/pages/login/index-form.html"
+  to = "/pages/login/index-login.html"
   status = 200
 
 [[redirects]]
