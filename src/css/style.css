@@ -21,6 +21,12 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
+main {
+  width: 100%;
+  max-width: 400px; /* Ajuste a largura máxima da main */
+  margin: 0 auto;
+}
+
 h2 {
   font-size: 24px;
   color: inherit;
@@ -34,14 +40,13 @@ form {
   align-items: center;
   justify-content: center;
   background: var(--background-color-light);
-  max-width: 400px;
+  width: 100%; /* Ajuste a largura do form para 100% da main */
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease, box-shadow 0.3s ease;
   margin: 0 auto;
 }
-
 .form-group {
   display: flex;
   flex-direction: column;
@@ -102,9 +107,21 @@ button:active {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Adicionado para espaçar o conteúdo */
   padding: 5px 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+}
+
+.menu-bar footer {
+  font-size: 10px;
+  text-align: right; /* Alinhado à direita */
+  color: var(--background-color-dark);
+  margin: 0;
+}
+
+.menu-bar footer p {
+  margin: 0;
 }
 
 .menu-btn {
@@ -168,6 +185,8 @@ footer {
   color: var(--text-color-light);
   padding: 10px;
   border-radius: 5px;
+  margin-top: 20px; 
+  letter-spacing: 1px; 
 }
 
 /* Theme Toggle */
